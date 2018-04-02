@@ -1,0 +1,311 @@
+page {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.wrapper {
+	padding: 30rpx;
+}
+
+.shot {
+	width: 50rpx;
+	float: left;
+}
+
+.location {
+	border-top: 1px dashed #d1d1d1;
+	border-bottom: 1px dashed #d1d1d1;
+	position: relative;
+	font-size: 28rpx;
+	color: #79b52e;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+}
+
+.location .map {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+   width: 90rpx;
+}
+
+.imageWrapper {
+	clear: both;
+	padding: 20rpx 0;
+	overflow: hidden;
+	border-top: 1px dashed #d1d1d1;
+	border-bottom: 1px dashed #d1d1d1;
+}
+
+.img_list {
+    overflow: hidden;
+}
+
+.img_list .img {
+    position: relative;
+    float: left;
+    width: 220rpx;
+    height: 220rpx;
+    margin-left: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.img_list .img:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.img_list .img image {
+    height: 100%;
+    width: 100%;
+}
+
+.img_list .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img_list .btn_del {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.img_list .btn_add {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.korjo.cn/xcx/loveImg/i-add.png) center center no-repeat;
+    background-size: 40% 40%;
+}
+.marker{
+	font-size: 25rpx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: left;
+	padding: 25rpx 0;
+}
+.marker input{
+	border-bottom: 2rpx solid #d1d1d1;
+	flex-grow: 1;
+	margin-left: 30rpx;
+}
+.marker_title{
+	font-size: 28rpx;
+}
+.header{
+	font-size: 25rpx;
+	border-top: 1px dashed #d1d1d1;
+	padding: 15rpx 0;
+}
+
+.header .sub_title {
+	margin-right: 30rpx;
+	line-height: 58rpx;
+	font-size: 28rpx;
+	display: inline-block;
+}
+
+.header picker{
+	display: inline-block;
+}
+
+.header .picker{	
+	font-size: 27rpx;
+	line-height: 50rpx;
+	padding-left: 30rpx;
+	width: 220rpx;
+	height: 50rpx;
+	border: 4rpx solid #79b52e;
+	border-radius: 10px;
+	background: #fff url(https://www.korjo.cn/xcx/accountImg/triangle.png) no-repeat  93% center /20rpx 20rpx;
+}
+
+.header .address {
+	font-size: 28rpx;
+}
+
+.header .address.firstAddress {
+	margin-top: 20rpx;
+}
+
+.thoughts {
+	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 28rpx;
+}
+
+.thoughts textarea {
+	border: 1px solid #d1d1d1;
+	width: 100%;
+	height: 200rpx;
+	overflow-y: auto;
+}
+
+.record {
+	overflow: hidden;
+	position: relative;
+}
+
+.record .audio{
+	padding: 15rpx 0;
+	float: left;
+}
+
+.record .pause {
+   position: absolute;
+   text-align: center;
+   top: 50%;
+   right: 0;
+   -webkit-transform: translate(0,-50%);
+   transform: translate(0,-50%);
+   color: #79b52e;
+   font-size: 28rpx;
+}
+
+.record image{
+   margin: 0;
+   width: 60rpx;
+   display: inline-block;
+}
+
+.record .audio .delete {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  width: 50rpx;
+}
+
+.watermark {
+	font-size: 28rpx;
+	width: 220rpx;
+	padding: 15rpx 0;
+	float: left;
+	border-radius: 30rpx;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(121,181,46,.8);
+	box-shadow: 2px 2px 4px #ccc;
+	margin: 20rpx 10rpx 0 0;
+}
+
+.save {
+	font-size: 30rpx;
+	width: 70%;
+	padding: 20rpx 0;
+	border-radius: 30rpx;
+	text-align: center;
+	color: #fff;
+	background-color: #79b52e;
+	box-shadow: 2px 2px 4px #ccc;
+	margin:  0 auto;
+	/*position: absolute;
+	bottom: 40rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 1;*/
+}
+
+.lightbox {
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 1000;
+}
+
+.box_container {
+    overflow: hidden;
+	width: 100%;
+	padding: 30rpx 0;
+	margin-bottom: 80rpx;
+}
+
+.box_container .picWrapper {
+	background: rgba(0,0,0,0.9);
+	width: 25%;
+	padding: 0 5rpx;
+	float: left;
+	box-sizing: border-box;
+	margin-bottom: 10rpx;
+}
+
+.box_container .picWrapper .pic {
+	box-sizing: border-box;
+	border: 1px solid rgba(225,225,225,.5);
+	height: 300rpx;
+	position: relative;
+}
+
+.box_container .picWrapper .pic .check {
+	width: 40rpx;
+	position: absolute;
+	right: 5rpx;
+	top: 5rpx;
+	z-index: 1005;
+}
+
+.box_container .pic .watermarkPic {
+	position: absolute;
+	z-index: 1001;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 90%;
+}
+
+.lightbox .button {
+    z-index: 2000;
+    position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+}
+
+.lightbox .button .cancel {
+	margin: 20rpx 5% 20rpx 5%;
+	font-size: 28rpx;
+	padding: 15rpx 0;
+	text-align: center;
+	color: #fff;
+	width: 40%;
+	background-color: #add67d;
+	float: left;
+	border-radius: 2px;
+}
+
+.lightbox .button .conform {
+	margin: 20rpx 5% 20rpx 5%;
+	font-size: 28rpx;
+	padding: 15rpx 0;
+	text-align: center;
+	background-color: #79b52e;
+	width: 40%;
+	float: right;
+	color: #fff;
+	border-radius: 2px;
+}

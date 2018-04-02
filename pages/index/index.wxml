@@ -1,0 +1,38 @@
+<view class="index-header">
+	<image style="width: 50%;" mode="widthFix" src="{{img}}korjo.png"></image>
+</view>
+<view class="index-container">
+	<image style="width: 80%;" mode="widthFix" src="{{img}}index_world.png"></image>
+</view>
+<view class="index-footer">
+	<image style="width:100%;" mode="widthFix" src="{{img}}index_mountain.png"></image>
+	<view style="position: relative;">
+		<image style="width:100%;" mode="widthFix" src="{{img}}index_road.png"></image>
+		<view style="position: absolute;left: 50%;bottom: 50%;transform: translateX(-50%);display: flex;justify-content: space-around; align-items: flex-end; width: 80%;">
+			<image style="width: 40%;" mode="widthFix" src="{{img}}guide.png" data-id="1" bindtap="choiceIdCard"></image>
+			<image style="width: 40%;" mode="widthFix" src="{{img}}tourist.png" data-id="2" bindtap="choiceIdCard"></image>
+		</view>
+	</view>
+</view>
+<image style="position: absolute;left: 0;top: 0; width:100%;height: 100%; z-index: -1;" mode="widthFix" src="{{img}}index_bg.png"></image>
+
+<!-- <view class="index_container">
+	<view class="index_header">
+		<image class="index_logo" src="../../images/logo.png" style="width: 55%;" mode="widthFix"></image>
+		<text class="index_title">地图足迹  我来记</text>
+		<image class="ufo" bindtap="tapUfo" src="../../images/ufo.png" mode="widthFix"></image>
+	</view>
+	<view class="button">
+		<image src="../../images/button.png" bindtap="goList" mode="widthFix"></image>
+	</view>
+</view>
+<view class="lightbox" bindtap="hide_lightbox" wx:if="{{show}}">
+    <view class="box_container">
+		<view class="box">
+		    <image class="box_image" src="../../images/bboy.png" mode="widthFix"></image>
+		    <view class="letter">
+		    	<text>世界那么大，光自己走走没意思？\n马上收集起来发给朋友“耀武扬威”吧\n定好自己的位置，录入您嘚瑟的旅游心得\n上传您开心的旅游照片，加个可爱的小水印\n分享给朋友这份美好的心情吧！</text>
+		    </view>
+		</view>
+	</view>
+</view> -->

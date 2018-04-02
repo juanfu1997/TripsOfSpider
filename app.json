@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/map/map",
+    "pages/result/result",
+    "pages/list/list",
+    "pages/footprint/footprint",
+    "pages/tripList/tripList",
+    "pages/tripDetail/tripDetail",
+    "pages/faq/faq"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "行程小蜘蛛",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,93 @@
+<view class="page" hidden="{{pageIndex!=1}}">
+	<view class="noTrip">
+		<text class="trip_tips">您还没有任何行程,\n现在去创建行程,并发给团友吧！</text>
+		<image class="goCreatTrips" mode="widthFix" src="{{img}}noTrip.png" bindtap="addTrip"></image>
+	</view>
+</view>
+
+<view class="page" hidden="{{pageIndex!=2}}">
+	<view class="addTrip" bindtap="addTrip">
+		<image mode="widthFix" src="../../images/addTrip.png"></image>
+	</view>
+	<view class="trip_detail" data-id="1" bindtap="goMap" ><!-- wx:for="{{trip_list}}" -->
+		<view class="detail_box">
+			<view class="detail_top">
+				<view class="trip_name">
+					大橘为重
+				</view>
+			</view>
+			<view class="trip_date">2018.1.5-2018.2.6</view>
+			<view class="trip_update	">
+				2018.1.5-2018.2.6
+			</view>
+		</view>
+		<view class="trip_itool">
+			<!-- <view class="trip_share" bindtap="shareTrip">
+				<image mode="widthFix" src="{{img}}share.png"></image>
+			</view> -->
+			<view class="itool_tab" wx:for="{{itool}}">
+				<image style="width: 70%;" mode="widthFix" src="{{img}}{{item.img}}"></image>
+				<view style="width: 100%;color: #626262;">{{item.txt}}</view>
+			</view>
+		</view>
+
+	</view>
+	<!-- <view style="width: 100%;height: 500rpx;background-color: #ccc;"></view> -->
+</view>
+<view class="page" hidden="{{pageIndex!=3}}">
+		<swiper class="swiper" indicator-dots="true" indicator-active-color="#2faaf7" bindchange="getSwiperId" current="{{current}}">
+			<swiper-item class="swiper-item" wx:for="{{tripTable}}" item-id="{{index}}">
+				<view class="header flex">
+					<view class="trip">
+						<view class="trip_title">行程名称：</view>
+						<input type="text" class="trip_input"/>
+					</view>
+					<view class="trip">
+						<view class="trip_title">行程日期：</view>
+						<picker bindchange="chooseStartDate" mode="date" value="date" start="{{maxData}}" end="{{end}}" style="display: inline-block;">
+					       <view class="picker">{{startDate}}</view>
+					    </picker>
+					    <!-- <picker bindchange="chooseEndDate" mode="date" value="date" start="{{start}}" end="{{end}}" style="display: inline-block;">
+					       <view class="picker">{{endDate}}</view>
+					    </picker> -->
+					</view>
+				</view>
+				<view class="placeModule flex" wx:for="{{item.table.scenicSpot}}" wx:for-item="item2" wx:for-index="index2">
+					<view class="flex" style="width:100%;position: relative;">
+						<view class="trip">
+							<view class="trip_title">时间：</view>
+							<picker mode="time" start="{{item.table.min_time}}" end="23:59" data-idx="{{index}}" data-idxx="{{index2}}" bindchange="scenicSpot_time">
+								<view class="trip_time" >{{item2.time}}</view>
+							</picker>
+							
+						</view>
+						<view class="delete_Moudule" data-idx="{{index}}" data-idxx="{{index2}}" bindtap="delete_Moudule">
+							<image class="delete" mode="widthFix" src="{{img}}delete_Moudule.png"></image>
+						</view>
+					</view>
+					<view class="trip">
+						<view class="trip_title">景点：</view>
+						<input type="text" class="trip_input"/>
+					</view>
+					<view class="trip">
+						<view class="trip_title">备注：</view>
+						<input type="text" class="trip_input" data-idx="{{index}}" data-idxx="{{index2}}" bindblur="scenicSpot_tips" />
+					</view>
+				</view>
+				
+				<view class="add_Moudule" bindtap="add_Moudule" data-idx="{{index}}">
+					<image style="width: 30rpx; margin: 10rpx;" mode="widthFix" src="{{img}}add_Moudule.png"></image>
+					<view style="font-size: 30rpx;">添加景点</view>
+				</view>
+				
+			</swiper-item>
+		</swiper >
+		<view class="footer">
+		<view class="tab" wx:for="{{tab}}" wx:for-index="tabindex" wx:for-tabitem="tabitem" data-tabindex="{{tabindex}}" data-current="{{current}}" bindtap="tab">
+			<image class="tab_img" mode="widthFix" src="{{img}}{{item.img}}"></image>
+			<!-- <view class="tab_txt">{{item.txt}}</view> -->
+		</view>
+	</view>
+	
+
+</view>

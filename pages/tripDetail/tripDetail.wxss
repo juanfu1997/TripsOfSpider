@@ -1,0 +1,162 @@
+.wrapper {
+	padding: 30rpx;
+}
+
+.header {
+	position: relative;
+}
+
+.header .sub_title {
+	font-size: 28rpx;
+	color: #79b52e;
+	border-bottom: 1px dashed #d1d1d1;
+}
+
+.header .address {
+	font-size: 28rpx;
+}
+
+.header .firstAddress {
+	margin-top: 20rpx;
+}
+
+.location {
+	border-top: 1px dashed #d1d1d1;
+	border-bottom: 1px dashed #d1d1d1;
+	position: relative;
+	font-size: 28rpx;
+	color: #79b52e;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+}
+
+.location .map {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+   width: 90rpx;
+}
+
+.record {
+	overflow: hidden;
+	position: relative;
+	border-bottom: 1px dashed #d1d1d1;
+}
+
+.record .audio{
+	padding: 15rpx 0;
+	float: left;
+}
+
+.record .pause {
+   position: absolute;
+   text-align: center;
+   top: 50%;
+   right: 0;
+   -webkit-transform: translate(0,-50%);
+   transform: translate(0,-50%);
+   color: #79b52e;
+   font-size: 28rpx;
+}
+
+.record image{
+   margin: 0;
+   width: 60rpx;
+   display: inline-block;
+}
+
+.thoughts {
+	margin-top: 30rpx;
+	font-size: 28rpx;
+}
+
+.imgWrapper {
+	overflow: hidden;
+	padding-top: 20rpx;
+}
+
+.imgWrapper .img {
+	position: relative;
+	box-sizing: border-box;
+	margin-right: 2%;
+	width: 32%;
+	float: left;
+}
+
+.imgWrapper .img:last-of-type {
+	margin-right: 0;
+}
+
+.imgWrapper .img image {
+    height: 300rpx;
+	width: 100%;
+	display: block;
+	box-shadow: 2px 2px 4px #ccc;
+}
+
+.imgWrapper .img .tag {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+    bottom: 0;
+    left: 0;
+	padding: 15rpx 0;
+	font-size: 25rpx;
+	color: #fff;
+	background-color: rgba(0,0,0,.3);
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 20rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.footer .save.sharing {
+	font-size: 30rpx;
+	width: 70%;
+	padding: 20rpx 0;
+	border-radius: 30rpx;
+	text-align: center;
+	color: #fff;
+	background-color: #79b52e;
+	box-shadow: 2px 2px 4px #ccc;
+}
+
+.footer .button .share, .footer .save {
+	line-height: 1;
+	margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #fff;
+    width: 25%;
+    background-color: #79b52e;
+	padding: 17rpx 0;
+	text-align: center;
+	border-radius: 15rpx;
+	box-shadow: 2px 2px 4px #ccc;	
+}
+
+.footer view.button .share{
+	margin-left: 10%;
+	float: left;
+}
+
+.footer view.save {
+	margin-right: 10%;
+	float: right;
+}
+
+.footer .delete {
+	position: absolute;
+	width: 60rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: 0;
+}

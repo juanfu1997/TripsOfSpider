@@ -1,0 +1,93 @@
+<view class="flex_view">
+
+	<view class="page_top">
+		<view class="trip_title">广州一日游</view>
+		<view class="tab_box">
+			<view class="top_tab" style="{{item.style}}" wx:for="{{top_tab}}" data-index="{{index}}" bindtap="switchTab">{{item.txt}}</view>
+		</view>
+		
+	</view>
+	  <view class="page_table">
+	  	<view class="trip_table" wx:for="{{tripTable}}">
+	  		<view class="trip_time">A.M 09:00</view>
+	  		<view class="trip_axis" style="{{index==tripTable.length-1?'height: 28rpx;':'height:100rpx;'}}">
+	  				<view class="{{index==0||index==tripTable.length-1?'logo':'logo2'}}"></view>
+	  		</view>
+	  		<view class="trip_place">
+	  			<view class="ScenicSpot">中山纪念堂</view>
+	  			<view class="Tips">备注：正门集合</view>
+	  		</view>
+	  	</view>
+	  </view>
+	  <view class="trips_dateList">
+	  	<!-- <view style="display: flex;" wx:for="22222"> -->
+	  		<scroll-view scroll-x="true" style="width: 100%;">
+			  	<view style="width:100%;display: inline-block;white-space: nowrap;">
+			  		<view class="date_box" style="" wx:for="{{tripTable.length*2-1}}">
+				  			<view wx:if="{{index%2==0?'true':''}}" class="date_day" data-index="{{index}}" bindtap="tripsDay">
+				  			<image class="date_state" mode="widthFix" src="{{img}}dateState.png"></image>
+					  		<view class="date_trip">
+					  			<view class="date_title">DAY1</view>
+					  			<view class="date_date">2018.03.24</view>
+					  		</view>
+				  		</view>
+				  		<view wx:if="{{index%2==0?'':'true'}}" id="{{index}}" class="line"></view>
+				  	</view>
+			  	</view>
+		  	</scroll-view>
+		  	<!-- <view wx:for="" wx:if="{{index==tripTable.length-1?'':'true'}}" class="line"></view> -->
+	  </view>
+		<view class="page_map" hidden="1">
+				<map wx:if="{{isLocated}}" id="map" longitude="{{lng}}" latitude="{{lat}}" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" show-location="true" style="{{!showTab?'height: 50%;':'height:50%;'}};flex-grow: 1;position: relative;">
+			<!-- <cover-view style="width: 80rpx;height: 80rpx;text-align: center;font-size: 60rpx; position: absolute;right: 50rpx;bottom: 5%;color:#79b52e;border: 5rpx solid #79b52e;border-radius: 50%;">+</cover-view> -->
+		</map>
+		<view class="footer" wx:if="{{isLocated}}" style="width: 100%;">
+		   <!--  <view class="button"><button bindtap="goList" class="share"><text>脚印列表</text></button></view>
+			<view class="add" bindtap="addLocation">
+			  <image src="../../images/addit.png" mode="widthFix"></image> 
+			</view>
+			<view class="hint"><text>*相同经纬度的脚印只显示前面的记录，\n建议点击“脚印列表”查看全部</text></view> -->
+			<view class="felx_view">
+				<image style="width:50rpx;transform:translateX(50%) rotate({{arrowDeg}}deg);" mode="widthFix" src="../../images/arrow.png" bindtap="showTab"></image>
+				<!-- <view style="text-align: center;width: 100%;">
+					<view style="transform: rotate(-90deg)translateY(-50%);">></view>
+				</view>
+		 -->		
+		 		<view wx:if="{{!showTab}}">
+		 			<scroll-view scroll-x="true" class="scroll_view" bindscroll="tabMove" scroll-left="">
+					<!--  display: inline-block-->
+					  <view style="background: #ccc; width: 200px; height: 100px;position: relative;overflow: hidden; " >
+					  	<view style="position: absolute;display: flex;flex-direction: column;justify-content: space-between;width: 100%; height: 100%;">
+					  		<view style="white-space: normal;">
+					  			<text decode="true">第一天观光点\n09:00-11:00</text>
+					  		</view>
+					  		<view>地址</view>
+					  	</view>
+					  	<!-- <view style="position:absolute;">地址</view> -->
+					  </view>
+					  <view style="background: #ccc; width: 200px; height: 100px;position: relative;overflow: hidden; " >
+					  	<view style="position: absolute;display: flex;flex-direction: column;justify-content: space-between;width: 100%; height: 100%;">
+					  		<view style="white-space: normal;">
+					  			<text decode="true">测试数据\n09:00-11:00</text>
+					  		</view>
+					  		<view>地址</view>
+					  	</view>
+					  </view>
+					  <view style="background: #ccc; width: 200px; height: 100px;"></view>
+					  <view style="background: yellow; width: 200px; height: 100px; "></view>
+					</scroll-view>
+					<view class="button"><button bindtap="goList" class="share"><text>脚印列表</text></button></view>
+		<view class="add" bindtap="addLocation">
+		  <image src="../../images/addit.png" mode="widthFix"></image> 
+		</view>
+		<!-- <view class="hint"><text>*相同经纬度的脚印只显示前面的记录，\n建议点击“脚印列表”查看全部</text></view> -->
+				</view>
+				
+			</view>
+		</view>
+	</view>
+</view>
+<view class="fail" hidden="{{hint_v}}">
+  <image class="boy" src="../../images/sorry.png" mode="widthFix"></image> 
+  <view class="text"><text>{{hintContent}}</text></view>
+</view>

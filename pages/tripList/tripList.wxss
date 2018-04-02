@@ -1,0 +1,244 @@
+page{
+	width: 100%;
+	height: 100%;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f3f3f3;
+}
+.flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.header{
+	width: 100%;
+	background-color: #fff;
+	padding: 30rpx 0;
+}
+.placeModule{
+	margin-top: 16rpx;
+	width: 100%;
+	background-color: #fff;
+	padding: 20rpx 0; 
+}
+.addTrip{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	margin: 20rpx 0;
+}
+.addTrip image{
+	width: 60%;
+}
+.page_title{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #79b52e;
+	text-align: center;
+}
+.trip{
+	width: 80%;
+	/*background-color: #ccc;*/
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 30rpx;
+}
+.trip:nth-last-child(1){
+	margin-bottom: 0;
+}
+.delete_Moudule{
+	position: absolute;
+	top: 0%;
+	right: 0;
+	/*transform: translateY(-50%);*/
+	width: 40rpx;
+	margin-right: 30rpx;
+}
+.delete{
+	width: 100%;
+}
+.textarea{
+	align-self: flex-start;
+}
+.trip .trip_title{
+	text-align: right;
+	/*width: 200rpx;*/
+	font-size: 28rpx;
+	color: #2faaf7;
+	flex-shrink: 0;
+}
+.trip picker{
+	flex-shrink: 1;
+	display: flex;
+	align-items: center;
+}
+.trip_input , trip_textare{
+	border: 2rpx solid #ccc;
+	width: 100%;
+	height: 80rpx;
+	flex-shrink: 1;
+	/*border: 2rpx solid #79b52e;*/
+	/*border-radius: 10rpx; */
+}
+.trip_textare{
+	border: 2rpx solid #ccc;
+}
+.trip_time{
+	border:2rpx solid #ccc;
+	width: 200rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+}
+.picker{
+	/*width: 100%;
+	height: 1.4em;*/
+	/*text-align: left;*/
+	font-size: 27rpx;
+	line-height: 80rpx;
+	padding-left: 30rpx;
+	width: 220rpx;
+	height: 80rpx;
+	border: 2rpx solid #ccc;
+	background: #fff url(https://www.korjo.cn/xcx/accountImg/triangle.png) no-repeat  93% center /20rpx 20rpx;
+}
+
+.add_Moudule {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 36rpx;
+	font-size: 30rpx;
+	width: 60%;
+	padding: 10rpx 0;
+	border:2rpx solid #2faaf7;
+	border-radius: 30rpx;
+	text-align: center;
+	color: #2faaf7;
+	background-color: #fff;	
+}
+.add_Moudule view{
+	display: flex;
+	align-items: center;
+}
+
+
+
+.trip_detail{
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 2rpx 2rpx 10rpx #ccc;
+	/*border-top:2rpx dashed #ccc;
+	border-bottom:2rpx dashed #ccc;
+*/	display: flex;
+	align-items: center;
+	margin-bottom:20rpx 0; 
+}
+.detail_box{
+	width: 70%;
+	margin: 20rpx 0;
+	margin-left: 40rpx;
+	border-right: 2rpx solid #d3d3d3;
+
+}
+.trip_itool{
+	width: 30%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.itool_tab{
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 28rpx;
+}
+.trip_share{
+	width: 35%;
+	margin: 0 auto;
+	background-color: #79b52e;
+	border-radius: 50%;
+	padding: 10rpx;
+}
+.trip_share image{
+	width: 100%;
+}
+.detail_top{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+.trip_name{
+	font-size: 36rpx;
+	font-weight: bold;
+}
+.trip_date{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: rgba(0,0,0,0.8);
+}
+.trip_update{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: rgba(0,0,0,0.4);
+}
+.footer{
+	/*position: absolute;
+	left: 0;
+	bottom: 0;*/
+	align-self: flex-end;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+}
+.tab{
+	width: 10%;
+	margin: 10rpx 0;
+}
+.tab_img{
+	width: 100%;
+}
+.noTrip{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.trip_tips{
+	font-size: 30rpx; 
+	color: #ccc;
+	margin-bottom: 30rpx;
+}
+.goCreatTrips{
+	width: 50%;
+}
+.swiper{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	flex-shrink: 1;
+}
+.swiper-item{
+	overflow: scroll;
+}

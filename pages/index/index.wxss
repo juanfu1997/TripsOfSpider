@@ -1,0 +1,25 @@
+/**index.wxss**/
+page {
+	font-family: "Microsoft YaHei";
+	height: 100%;
+	width: 100%;
+  background-color: #fff;
+
+	/*background: #161618 bottom center /100% url(https://www.korjo.cn/xcx/footprintImg/bg.jpg) fixed no-repeat;*/
+}
+
+.index-header{
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom: 40rpx;
+}
+.index-container{
+  width: 100%;
+}
+.index-footer{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(0);
+  width: 100%;
+}

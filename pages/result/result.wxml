@@ -1,0 +1,32 @@
+<view class="wrapper">
+  <view class="header">
+    <view class="sub_title">日期: {{date}}</view>
+    <view class="address firstAddress"><text>{{name}}</text></view>
+    <view class="address"><text>({{address}})</text></view>
+  </view>
+  <view class="location">
+     <view class="lat"><text>经度：{{lat}}</text></view>
+     <view class="lon"><text>纬度：{{lon}}</text></view>
+     <image class="map" bindtap="openLocation" src="../../images/map.png" mode="widthFix"></image>
+  </view>
+  <view class="record" wx:if="{{hasRecord}}">
+    <view class="audio">
+        <image class="audioPic" src="../../images/listen.png" bindtap="audiotap" mode="widthFix"></image>
+        <view class="pause" bindtap="stop"><text>{{playSign}}</text></view>
+    </view>
+  </view>
+  <view class="imgWrapper">
+     <view class="img" wx:for="{{images}}" wx:key="id" bindtap="tapImg" data-index="{{index}}">
+        <image src="{{item}}" mode="aspectFill"></image>
+        <view class="tag">查看原图</view>
+     </view>
+  </view>
+  <view class="thoughts">
+    <text>{{thought}}</text>
+  </view>
+  <view class="footer">
+    <view class="save {{sharing}}" bindtap="goMap" style="background-color: {{bgColor}}">脚印地图</view>
+    <image class="delete" wx:if="{{notShare}}" bindtap="tapDelete" src="../../images/delete-button.png" mode="widthFix"></image>
+    <view class="button" wx:if="{{notShare}}"><button wx:if="{{notShare}}" open-type="share" class="share"><text>分享</text></button></view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<view class="wrapper">
+  <view class="marker">
+    <view class="marker_title">标记提示语:</view>
+    <input type="text"  placeholder="{20字以内}" />
+  </view>
+  <view class="header">
+    <view class="sub_title">日期: {{theDate}}</view>
+    <picker wx:if="{{isNew}}" bindchange="chooseDate" mode="date" value="date" start="{{start}}" end="{{end}}">
+       <view class="picker">{{date}}</view>
+    </picker>
+    <view class="address firstAddress"><text>{{name}}</text></view>
+    <view class="address"><text>({{address}})</text></view>
+  </view>
+  <view class="location">
+     <view class="lat"><text>经度：{{lat}}</text></view>
+     <view class="lon"><text>纬度：{{lon}}</text></view>
+     <image class="map" bindtap="openLocation" src="../../images/map.png" mode="widthFix"></image>
+  </view>
+  <view class="record">
+    <view class="audio">
+        <image class="audioPic" src="../../images/{{audioPic}}.png" bindtap="{{audiotap}}" mode="widthFix"></image>
+        <image class="delete" style="display: {{audioDeleteHidden}};" bindtap="deleteAudio" src="../../images/delete.png" mode="widthFix"></image>
+    </view>
+    <view class="pause" bindtap="stop" hidden="{{stopButtonHidden}}"><text>结束录音</text></view>
+  </view>
+  <view class="imageWrapper">
+    <view class="img_list clearfix">
+      <view class="img" wx:for="{{img_list}}" wx:key="{{index}}">
+          <image src="{{item.src}}" data-idx="{{index}}" bindtap="selectImg"></image>
+          <view class="mask" data-idx="{{index}}" bindtap="selectImg" hidden="{{item.hide}}"></view>
+          <view class="btn_del" data-idx="{{index}}" bindtap="delImg" hidden="{{item.hide}}">×</view>
+          <view class="btn_add" data-idx="{{index}}" bindtap="selectImg"></view>
+      </view>
+    </view>
+    <view class="watermark" wx:for="{{addingArray}}" wx:key="id" data-index="{{index}}" bindtap="addWatermark" style="background-color: {{item.bgColor}}">{{item.buttonValue}}</view>
+  </view>
+  <view class="thoughts" style="display: {{textShowing}}">
+    <textarea bindinput="inputThoughts" bindfocus="inputFocus" bindblur="inputBlur" placeholder="记些感想(150字以内)" maxlength="150" placeholder-style="font-size: 30rpx;" style="border-color: {{textBorder}}"/>
+  </view>
+  <view class="save" bindtap="save" style="background-color: {{bgColor}}">保存</view>
+</view>
+<view class="lightbox" style="display: {{lightboxDisplay}}">
+    <view class="box_container">
+       <view class="picWrapper" wx:for="{{waterMarkArray}}" wx:key="id" bindtap="chooseWarterMark" data-index="{{index}}" >
+         <view class="pic">
+          <image class="check" src="{{item.icon}}" mode="widthFix">></image>
+          <image class="watermarkPic" src="{{item.img}}" mode="widthFix"></image>
+         </view>
+       </view>
+    </view>
+    <view class="button">
+       <view class="cancel" bindtap="hide_box">取消</view>
+       <view class="conform" bindtap="conformButton">确定</view>
+    </view>
+</view>
